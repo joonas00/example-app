@@ -1,0 +1,13 @@
+server:
+  port: 8099
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/link
+    username: user
+    password: password
+  jpa:
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      ddl-auto: validate
+flyway:
+  baseline-on-migrate: true

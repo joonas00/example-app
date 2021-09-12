@@ -1,0 +1,16 @@
+version: "3"
+services:
+  backend:
+    image: docker.io/library/linkshortener:0.0.1-SNAPSHOT
+    ports:
+      - "8099:8099"
+    depends_on:
+      - "database"
+  database:
+    image: postgres:12-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=link
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
